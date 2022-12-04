@@ -17,12 +17,26 @@ int dpOfBag(int bag){
     return dp[weight.size()-1][bag];
 }
 
+int dpOfBag_2(int bag){
+    vector<int> weight = {4,5,6,2,2};
+    vector<int> value = {6,4,5,3,6};
+    vector<int> dp(bag,0);
+    for(int i = weight[0]-1;i<bag;i++) dp[i] = value[0];
+    for(int i = 1;i<weight.size();i++){
+        for(int j = bag-1;j>=weight[i];j--){
+            if(j>=weight[i]) dp[j] = max(dp[j],dp[j-weight[i]]+value[i]);
+        }
+    }
+    return dp[bag-1];
+
+}
+
 
 
 int main() {
     int bag;
     cin>>bag;
-    auto maxValue = dpOfBag(bag);
+    auto maxValue = dpOfBag_2(bag);
     cout<<"Max Value of Bag of "<<bag<<" kg is: "<<maxValue<<std::endl;
     return 0;
 }
