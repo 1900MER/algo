@@ -23,7 +23,7 @@ int dpOfBag_2(int bag){
     vector<int> dp(bag,0);
     for(int i = weight[0]-1;i<bag;i++) dp[i] = value[0];
     for(int i = 1;i<weight.size();i++){
-        for(int j = bag-1;j>=weight[i];j--){
+        for(int j = bag;j>=weight[i];j--){
             if(j>=weight[i]) dp[j] = max(dp[j],dp[j-weight[i]]+value[i]);
         }
     }

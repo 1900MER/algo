@@ -1,0 +1,3 @@
+/Users/haowang/Desktop/算法/algo/backtrack/NQueen/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/haowang/Desktop/算法/algo/backtrack/NQueen/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/haowang/Desktop/算法/algo/backtrack/NQueen/cmake-build-debug/CMakeFiles/NQueen.dir
