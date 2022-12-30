@@ -54,10 +54,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/haowang/Desktop/算法/algo/order
+CMAKE_SOURCE_DIR = /Users/haowang/Desktop/算法/algo/SortAlgo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/haowang/Desktop/算法/algo/order/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/haowang/Desktop/算法/algo/SortAlgo/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/order.dir/clean
 CMakeFiles/order.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/order.dir/build.make CMakeFiles/order.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/order.dir/build.make CMakeFiles/order.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/haowang/Desktop/算法/algo/order/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target order"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/haowang/Desktop/算法/algo/SortAlgo/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target order"
 .PHONY : CMakeFiles/order.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/order.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/haowang/Desktop/算法/algo/order/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/haowang/Desktop/算法/algo/SortAlgo/cmake-build-debug/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/order.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/haowang/Desktop/算法/algo/order/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/haowang/Desktop/算法/algo/SortAlgo/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/order.dir/rule
 
 # Convenience name for target.

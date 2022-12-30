@@ -1,4 +1,4 @@
-# Install script for directory: /Users/haowang/Desktop/算法/algo/order
+# Install script for directory: /Users/haowang/Desktop/算法/algo/SortAlgo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/haowang/Desktop/算法/algo/order/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/haowang/Desktop/算法/algo/SortAlgo/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
