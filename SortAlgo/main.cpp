@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <tuple>
 
 std::vector<int> bubbleSort(std::vector<int> array){
     auto a = array;
@@ -35,17 +36,19 @@ std::vector<int> selectSort(std::vector<int> array){
 
 std::vector<int> insertSort(std::vector<int> array){
     int size = array.size();
-    for(int i =1;i<size;i++){
-        int preIndex = i-1;
-        while(preIndex>=0 && array[preIndex]>array[i]){
+    int preIndex;
+    for(int i = 1;i<size;i++){
+        preIndex = i-1;
+        auto current = array[i];
+        while(preIndex>=0 && array[preIndex]>current){
             array[preIndex+1]  = array[preIndex];
             preIndex  = preIndex-1;
         }
-        array[preIndex+1] = array[i];
+        array[preIndex+1] = current;
     }
     return array;
 }
-
+// ----------------------------------------mergeSort----------------------------------------
 std::vector<int> mergedArray(std::vector<int> left,std::vector<int> right){
     std::vector<int> result;
     int i,j =0;
@@ -80,8 +83,32 @@ std::vector<int> mergeSort(std::vector<int> array){
     return mergedArray(mergeSort(left), mergeSort(right));
 }
 
-std::vector<int> quickSort(std::vector<int> array){
+// ----------------------------------------QuickSort----------------------------------------
+int partition(std::vector<int>& array, int left, int right) {
 
+    int i = left;
+
+    for(int j = left;j<right;j++){
+        if (array[j]<array[right]){
+            std::swap(array[i],array[j]);
+            i++;
+        }
+    }
+
+    std::swap(array[i],array[right]);
+    return i;
+}
+
+void quickSortRecur(std::vector<int>& array, int left, int right){
+    if ( left>=right ) return;
+    int pivot = partition(array,left,right);
+    quickSortRecur(array,left,pivot-1);
+    quickSortRecur(array,pivot+1,right);
+}
+
+std::vector<int> quickSort(std::vector<int>& array){
+    quickSortRecur(array,0,array.size()-1);
+    return array;
 }
 
 
@@ -89,11 +116,8 @@ std::vector<int> quickSort(std::vector<int> array){
 
 
 
-
-
-
 int main() {
-    std::vector<int> array = {0,5,4,3,6,8,10,2,4,8};
+    std::vector<int> array = {0,1,4,3,2,10,8,6};
     auto sortedArray4 = mergeSort(array);
     auto sortedArray1 = bubbleSort(array);
     auto sortedArray2 = selectSort(array);
@@ -114,6 +138,7 @@ int main() {
 
     std::cout<<std::endl<< "Quick Sort: "<<std::endl;
     for(int i = 0;i<sortedArray5.size();i++) std::cout << sortedArray5[i] << " ";
+
 
 
 
